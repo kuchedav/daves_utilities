@@ -8,4 +8,4 @@ author = "David Kuchelmeister"
 author-email = "kuchelmeister.david@gmail.com"
 home-page = "https://github.com/kuchedav/daves_utilities"
 classifiers = ["License :: OSI Approved :: MIT License"]
-
+description-file = "README.md"
