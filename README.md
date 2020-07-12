@@ -1,7 +1,7 @@
 # daves_utilities
 
 ## description
-Daves utilities is a collection of function which I repeatedly needed but did not find for python.
+Daves utilities is a collection of function which I repeatedly needed but did not find implemented for python.
 
 ## installation
 pip install daves_utilities
