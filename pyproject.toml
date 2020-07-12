@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "daves_utilities"
+author = "David Kuchelmeister"
+author-email = "kuchelmeister.david@gmail.com"
+home-page = "https://github.com/kuchedav/daves_utilities"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
