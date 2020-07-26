@@ -3,3 +3,10 @@ Daves utilities is a collection of useful python functions which I would like to
 """
 
 __version__ = "0.0.2"
+
+from daves_utilities.for_long import for_long
+from daves_utilities.fun_save import fun_save
+from daves_utilities.is_equal import is_equal
+from daves_utilities.print_structure import print_str
+
+__all__ = ["for_long","fun_save","is_equal","print_str"]

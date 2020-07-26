@@ -25,6 +25,7 @@ def is_equal_recursive(elem1,elem2):
 
 def list_flatten(l, a=None):
     if a is None: a = []
+    l = [l] if isinstance(l,bool) else l
     for i in l:
         if isinstance(i, list):
             list_flatten(i, a)
@@ -39,8 +40,6 @@ def is_equal(elem1,elem2,flatten = True):
     else: return boolen_list
 
 if __name__=="__main__":
-    import pandas as pd
-    import numpy as np
     df2 = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),columns=['a', 'b', 'c'])
 
     test1 = [{"a":1,"b":2}, 10, [1,2,[4,5,6]], df2]

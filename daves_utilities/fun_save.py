@@ -1,6 +1,6 @@
 import os
 import pickle
-import is_equal.is_equal as is_equal
+from .is_equal import is_equal
 
 def fun_save(fun_input, attr_input, path = "./", identifier : str = ""):
 

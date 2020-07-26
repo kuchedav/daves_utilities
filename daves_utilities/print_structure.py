@@ -61,9 +61,15 @@ def print_level_type(input_elem,level,pandas_dtype = None):
     print(print_color)
 
 if __name__=="__main__":
-    import pandas as pd
-    import numpy as np
-    
+    """
+    Testing the print_structure function
+
+    execute test on command line with:
+    > pytest test_print_structure.py
+    """
+
+    from ..print_structure import print_str
+
     # pandas data
     df2 = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),columns=['a', 'b', 'c'])
     data = np.array(['a','b','c','d'])
@@ -82,7 +88,7 @@ if __name__=="__main__":
     set_var = set((1,2,4))
     # range
     range_var = range(0,3)
-    
+
     ### bytes
     simple_bytes_string = b"test_test"
     string = "Pyth"
@@ -92,5 +98,5 @@ if __name__=="__main__":
     test1 = [{"a":1,"b":2}, 10, [1,2,[4,5,6,[1,3,["string","test",[1,[1,[1]]]]]]], \
         df2, [s], np_array, complex_n, boolean_var, tuple_var, set_var, range_var, \
             simple_bytes_string, bytes_arr, mem_var]
-    
+
     print_str(object_atr = test1)
