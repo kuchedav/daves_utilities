@@ -2,7 +2,7 @@
 Daves utilities is a collection of useful python functions which I would like to provide to anybody who is insterested in using them.
 """
 
-__version__ = "0.0.2"
+__version__ = "0.0.4"
 
 from daves_utilities.for_long import for_long
 from daves_utilities.fun_save import fun_save

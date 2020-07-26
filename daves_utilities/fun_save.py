@@ -3,7 +3,7 @@ import os
 os.chdir("/Users/davidkuchelmeister/Documents/Projects_Coding/TMP_projects/daves_utilities")
 
 import pickle
-from is_equal import is_equal
+from .is_equal import is_equal
 
 def fun_save(fun_input, attr_input, path = "./", identifier : str = ""):
 

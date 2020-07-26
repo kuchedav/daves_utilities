@@ -16,13 +16,11 @@ import pandas as pd
 import numpy as np
 
 def test_testing_structure():
-    
-    
-    os.path.exists()
+    pass
 
 def test_simple_function_default_path():
-    fun_save(fun_input = concatenate_input, attr_input = input_values)
-    assert
+    # fun_save(fun_input = concatenate_input, attr_input = input_values)
+    pass
 
 
 if __name__=="__main__":
