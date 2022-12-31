@@ -23,17 +23,14 @@ clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
 
-active:
-	source $(PROJECT_DIR)/env/bin/activate
-
 package:
 	$(PYTHON_INTERPRETER) -m build
 
 publish: package
-	@echo 'THIS COMMAND ONLY DEPLOYS TO TEST_PYPI'
-	@echo 'To deploy to PYPI use the command publish_prod'
 	twine check dist/*
 	twine upload -r testpypi dist/*
+	@echo 'THIS COMMAND ONLY DEPLOYS TO TEST_PYPI'
+	@echo 'To deploy to PYPI use the command publish_prod'
 
 publish_prod: package
 	twine check dist/*

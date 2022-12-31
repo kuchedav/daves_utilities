@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 authors = [
-  {name = "davidkuchelmeister"},
+  {name = "David Kuchelmeister", email = "kuchelmeister.david@gmail.com"},
 ]
 dependencies = [
   "pandas >= 1.4.0",
