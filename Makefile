@@ -38,7 +38,7 @@ package:
 # 	twine upload dist/*
 
 publish: package
-	twine upload --repository testpypi  --config-file ~/.pypi dist/*
+	twine upload --repository testpypi --config-file ~/.pypi dist/*
 
-publish_prod: package
-	twine upload --repository pypi  --config-file ~/.pypi dist/*
+publish_prod:
+	twine upload --repository pypi --config-file ~/.pypi dist/*
