@@ -34,4 +34,4 @@ publish: package
 
 publish_prod: package
 	twine check dist/*
-	twine upload -r pypi dist/*
+	twine upload dist/*
