@@ -8,6 +8,7 @@ authors = [
 ]
 dependencies = [
   "pandas >= 1.4.0",
+  "progressbar >= 2.5",
 ]
 dynamic = ["version"]
 name = "daves_utilities"
