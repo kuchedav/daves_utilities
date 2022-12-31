@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name {{
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name {{
+  spec:
+    imagePullSecrets:
+      - name: secret-name
+    containers:
+      - name: {{ .Chart.Name {{
+        imagePullPolicy: Always
+        image: "path-to-storage-of-image"
+        env:
+        - name: ENV_VARIABLE_NAME
+          valueFrom:
+            secretKeyRef:
+              name: name-secret
+              key: password
+        volumeMounts:
+          - name: volume-name
+            mountPath: "/app/path/etc"
+            subPath: sub-path
+    volumes:
+      - name: volume-name
+        configMap:
+          name: actual-name-of-pvc
