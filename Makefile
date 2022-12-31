@@ -38,3 +38,6 @@ package:
 
 publish: package
 	twine upload --repository testpypi  --config-file ~/.pypi dist/*
+
+publish_prod: package
+	twine upload --repository pypi  --config-file ~/.pypi dist/*
