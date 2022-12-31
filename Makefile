@@ -24,6 +24,7 @@ clean:
 	find . -type d -name "__pycache__" -delete
 
 package:
+	rm -rf dist/*
 	$(PYTHON_INTERPRETER) -m build
 
 # publish: package
