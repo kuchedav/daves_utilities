@@ -27,18 +27,12 @@ package:
 	rm -rf dist/*
 	$(PYTHON_INTERPRETER) -m build
 
-# publish: package
-# 	twine check dist/*
-# 	twine upload -r testpypi dist/*
-# 	@echo 'THIS COMMAND ONLY DEPLOYS TO TEST_PYPI'
-# 	@echo 'To deploy to PYPI use the command publish_prod'
-
-# publish_prod: package
-# 	twine check dist/*
-# 	twine upload dist/*
-
 publish: package
+	twine check dist/*
 	twine upload --repository testpypi --config-file ~/.pypi dist/*
+	@echo 'THIS COMMAND ONLY DEPLOYS TO TEST_PYPI'
+	@echo 'To deploy to PYPI use the command publish_prod'
 
 publish_prod:
+	twine check dist/*
 	twine upload --repository pypi --config-file ~/.pypi dist/*

@@ -1,5 +1,5 @@
 """
-print_structure prints out the structure of any arbitrary python object..
+print_structure prints out the structure of any arbitrary python object.
 """
 
 __version__ = "0.0.3"

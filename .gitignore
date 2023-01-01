@@ -98,6 +98,3 @@ target/
 
 # ignore version file
 _version.py
-
-# ignore login credentials for pypi
-.pypi
