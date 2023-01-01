@@ -80,8 +80,6 @@ if __name__ == "__main__":
     > pytest test_print_structure.py
     """
 
-    from ..print_structure import print_str  # noqa
-
     # pandas data
     df2 = pd.DataFrame(
         np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=["a", "b", "c"]

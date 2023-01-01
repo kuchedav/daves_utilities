@@ -14,6 +14,14 @@ globals:
 	@echo 'PROJECT_NAME: ' $(PROJECT_NAME)
 	@echo 'PYTHON_INTERPRETER: ' $(PYTHON_INTERPRETER)
 
+functions:
+	@echo '=============================================='
+	@echo '=    displaying all functions available      ='
+	@echo '=============================================='
+	@echo 'test: run tox to fully test package'
+	@echo 'publish: publish package to pypi_test server'
+	@echo 'publish_prod: publish package to pypi server'
+
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
@@ -27,12 +35,19 @@ package:
 	rm -rf dist/*
 	$(PYTHON_INTERPRETER) -m build
 
-publish: package
+check_credentials_exist:
+	[ -f ~/.pypi ] && echo 'pypi credentials found' || echo '~/.pypi file not found!'
+
+publish: package check_credentials_exist
 	twine check dist/*
 	twine upload --repository testpypi --config-file ~/.pypi dist/*
+	@echo '==============================================='
 	@echo 'THIS COMMAND ONLY DEPLOYS TO TEST_PYPI'
 	@echo 'To deploy to PYPI use the command publish_prod'
 
-publish_prod:
+publish_prod: check_credentials_exist test
 	twine check dist/*
 	twine upload --repository pypi --config-file ~/.pypi dist/*
+
+test:
+	tox

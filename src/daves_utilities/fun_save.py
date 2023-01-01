@@ -1,7 +1,7 @@
 import os
 import pickle
 
-from . import is_equal
+from daves_utilities import is_equal
 
 
 def fun_save(

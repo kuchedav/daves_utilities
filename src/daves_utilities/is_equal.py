@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 
 def is_equal_recursive(elem1, elem2):  # noqa
@@ -51,15 +50,3 @@ def is_equal(elem1, elem2, flatten=True):
         return all(list_flatten(boolen_list))
     else:
         return boolen_list
-
-
-if __name__ == "__main__":
-    df2 = pd.DataFrame(
-        np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=["a", "b", "c"]
-    )
-
-    test1 = [{"a": 1, "b": 2}, 10, [1, 2, [4, 5, 6]], df2]
-    test2 = [{"a": 1, "b": 2}, 10, [1, 2, [4, 5, 6]], df2]
-
-    out = is_equal(test1, test2)
-    print(out)
