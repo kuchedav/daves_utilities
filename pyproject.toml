@@ -15,7 +15,7 @@ testpaths = [
 name = "daves_utilities"
 authors = ["David Kuchelmeister"]
 description = "some useful function for myself"
-version = "0.1.5"
+version = "0.1.7"
 
 license = "MIT"
 
@@ -52,3 +52,5 @@ pre-commit = "^3.3.3"
 pandas = "2.0.2"
 polars = "^0.18.7"
 progressbar2 = "^4.2.0"
+cryptography = "^41.0.2"
+progressbar = "^2.5"
