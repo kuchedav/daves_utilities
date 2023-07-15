@@ -56,7 +56,7 @@ def for_long(iter_fun, iter_attr, save_every_n=10, path="./"):  # noqa
         # find file with highest iter backup number
         print(f"Started backup files {path_backup} have been found")
         for i in listdir(path_backup):
-            m = re.search(fr"{iter_fun.__name__}_(\d*).csv", i)
+            m = re.search(rf"{iter_fun.__name__}_(\d*).csv", i)
             if m and int(m.group(1)) > counter:
                 counter = int(m.group(1))
         df_out = pd.read_csv(f"{path_backup}/{iter_fun.__name__}_{str(counter)}.csv")
@@ -119,7 +119,6 @@ def for_long(iter_fun, iter_attr, save_every_n=10, path="./"):  # noqa
 
 
 if __name__ == "__main__":
-
     # create input
     embeddings = ["tf-idf", "word2vec", "doc2vec", "bert"]
     embeddings_dim = [10, 20, 40, 100, 500, 1000]

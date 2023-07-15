@@ -2,7 +2,6 @@ import numpy as np
 
 
 def is_equal_recursive(elem1, elem2):  # noqa
-
     if type(elem1) != type(elem2):
         return False
     if isinstance(elem1, list):
