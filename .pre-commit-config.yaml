@@ -19,13 +19,13 @@ repos:
         language: python
         require_serial: true
         types_or: [python]
-      - id: flake8
-        name: flake8
-        entry: flake8
+      - id: ruff
+        name: ruff
+        entry: ruff
         language: python
-        types: [python]
         require_serial: true
-        args: ["--max-line-length", "88"]
+        types_or: [python, pyi, jupyter]
+        args: [--fix, --exit-non-zero-on-fix]
       - id: pre-commit-hooks
         name: fix UTF-8 byte order marker
         entry: fix-byte-order-marker
